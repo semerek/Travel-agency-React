@@ -34,17 +34,21 @@ export default function reducer(statePart = [], action = {}) {
     case ADD_TAG:
       return {
         ...statePart,
-        tag: action.payload,
+        tags: [...statePart.tags, action.payload ],
       };
     case REMOVE_TAG:
       return {
         ...statePart,
-        tag: action.payload,
+        tags: [...statePart.tags.filter(tag => tag != action.payload)],
+         
       };
     case CHANGE_DURATION:
       return {
         ...statePart,
-        duration: action.payload,
+        duration: {
+        ...statePart.duration,
+        [action.payload.type]: action.payload.value, 
+        }
       };
       
     // TODO - handle other action types

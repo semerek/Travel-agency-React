@@ -22,13 +22,13 @@ const OrderOptionDate = ({currentValue, setOptionValue}) => (
     type='date'
     value={currentValue}
     selected={currentValue}
-    onChange={event => setOptionValue(event.currentTarget.value)}
+    onChange={date => setOptionValue(date)}
     placeholderText = {'Date selection'}   
   />
 );
 
 OrderOptionDate.propTypes = {
-  currentValue: PropTypes.string,
+  currentValue: PropTypes.instanceOf(Date),
   setOptionValue: PropTypes.func,
 };
   

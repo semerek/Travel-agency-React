@@ -190,12 +190,7 @@ for (let type in optionTypes) {
 
         });
         break;
-      }
-      
-     
-       
+      } 
     }
-
-
   });
 }

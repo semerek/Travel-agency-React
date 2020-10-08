@@ -53,7 +53,7 @@ const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
     });
 };
 
-const OrderForm = ({tripCost, options, setOrderOption}) => (
+const OrderForm = ({tripCost, options, setOrderOption, tripName, tripId, countryCode}) => (
   
   <Row>
     {pricing.map(option => (
@@ -64,7 +64,7 @@ const OrderForm = ({tripCost, options, setOrderOption}) => (
     <Col xs={12}>
       <OrderSummary totalCost={tripCost} orderOptions={options} />
     </Col>
-    <Button onClick={() => sendOrder(options, tripCost)}>Order now!</Button>
+    <Button onClick={() => sendOrder(options, tripCost, tripName, tripId, countryCode)}>Order now!</Button>
 
   </Row>
 );

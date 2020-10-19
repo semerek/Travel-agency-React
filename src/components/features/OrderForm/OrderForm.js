@@ -6,13 +6,12 @@ import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
 import settings from '../../../data/settings.js';
 import Button from '../../common/Button/Button';
-import {formatPrice} from '../../../utils/formatPrice';
 import {calculateTotal} from '../../../utils/calculateTotal';
 
 
 
 const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
-  const totalCost = formatPrice(calculateTotal(tripCost, options));
+  const totalCost = calculateTotal(tripCost, options);
 
   const {contact, name} = options;
 
@@ -68,6 +67,7 @@ const OrderForm = ({tripCost, options, setOrderOption, tripName, tripId, country
 
   </Row>
 );
+
 
 
 OrderForm.propTypes = {

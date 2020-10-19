@@ -2,13 +2,15 @@
 
 .component {
     position: relative;
-    text-align: center;
-    color: #fff;
+    text-align: center;  
   }
   
   .title, .promoDescription {
     position: absolute;
     width: 100%;
+    color: #fff;
+
+    
   }
   
   .title {

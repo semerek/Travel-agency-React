@@ -8,8 +8,14 @@ class HappyHourAd extends React.Component {
   constructor(){
     super();
     
-    setInterval(() => this.forceUpdate(), 1000);
+    this.state = {
+      interval: setInterval(() => this.forceUpdate(), 1000),
+    };
 
+  }
+  
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
   }
 
 
@@ -25,19 +31,20 @@ class HappyHourAd extends React.Component {
   }
   
   render() {
-    const {title} = this.props;
-    {/*const countdown = this.getCountdownTime();*/}
+    const {title, promoDescription} = this.props;
+    const countdown = this.getCountdownTime();
+    let message = promoDescription;
     {/* Jeśli ta liczba jest większa niż równowartość 23 godzin, 
-    to ma zostać wyświetlona informacja o promocji (przekazywana w propsie). 
+    to ma zostać wyświetlona informacja o promocji (przekazywana w propsie).
     W przeciwnym wypadku, powinna zostać wyświetlona wartość tej stałej, co da taki sam efekt, jak do tej pory.*/}
-    {/* if (countdown > 23) {
-      message == promoDescription;
-    } else {
-     } */}
+    if (countdown < 23 * 60 * 60) {
+      message = countdown;
+    } 
+
     return(
-      <div className={styles.Component}>
+      <div className={styles.component}>
         <h3 className={styles.title}>{title}</h3>
-        <div className={styles.promoDescription}>{/*{message}*/}</div>
+        <div className={styles.promoDescription}>{message}</div>
       </div>
     );
     

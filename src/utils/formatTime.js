@@ -16,3 +16,4 @@ const timeDisplay = (...timeElements) => {
 };
 
 //jak zrobić ten zero padding ??
+//https://stackoverflow.com/questions/25198968/padding-zero-to-the-left-of-number-in-javascript

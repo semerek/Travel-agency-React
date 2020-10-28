@@ -6,9 +6,6 @@ const select = {
   title: '.title',
 };
 
-const mockProps = {
-  days: 15,
-};
 
 describe('Component DaysToSummer', () => {
 
@@ -22,9 +19,5 @@ describe('Component DaysToSummer', () => {
     expect(component.exists(select.title)).toEqual(true);
   });
 
-  it('should recive title from props', () => {
-    const component = shallow(<DaysToSummer {...mockProps} />);
-    expect(component.find(select.title).text()).toEqual('Do lata pozostało 15 dni');
-  });
 
 });

@@ -7,7 +7,7 @@ export const formatTime = time => {
   const minutes = parseInt((time - (hour * 3600)) / 60);
   const seconds = parseInt(time - (hour * 3600) - (minutes * 60));
 
-  return timeDisplay(hour, minutes, seconds).join(':');
+  return timeDisplay(returnWithZero(hour), returnWithZero(minutes), returnWithZero(seconds)).join(':');
 };
 
 const timeDisplay = (...timeElements) => {
@@ -15,5 +15,11 @@ const timeDisplay = (...timeElements) => {
   return timeElements;
 };
 
-//jak zrobić ten zero padding ??
-//https://stackoverflow.com/questions/25198968/padding-zero-to-the-left-of-number-in-javascript
+const returnWithZero = (number) => {
+  if (number < 10) {
+    return `0${number}`;
+  } else {
+    return number;
+  }
+};
+

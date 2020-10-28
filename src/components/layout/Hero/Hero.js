@@ -5,9 +5,16 @@ import HappyHourAd from '../../features/HappyHourAd/HappyHourAd';
 import DaysToSummer from '../../features/DaysToSummer/DaysToSummer';
 import moment from 'moment';
 
-const eventdate = moment('2020-06-21');
+let eventdate = moment('2021-06-21');
 const todaysdate = moment();
-const daysLeft = eventdate.diff(todaysdate, 'days');
+let  daysLeft = eventdate.diff(todaysdate, 'days');
+
+if (daysLeft < -60) {
+  eventdate = moment();
+  daysLeft = eventdate.diff(todaysdate, 'days');
+
+}
+
 
 
 

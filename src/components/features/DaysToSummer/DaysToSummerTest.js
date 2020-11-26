@@ -19,5 +19,4 @@ describe('Component DaysToSummer', () => {
     expect(component.exists(select.title)).toEqual(true);
   });
 
-
 });

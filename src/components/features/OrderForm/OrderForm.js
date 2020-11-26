@@ -10,7 +10,7 @@ import {calculateTotal} from '../../../utils/calculateTotal';
 
 
 
-const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
+const sendOrder = (options, tripCost, tripName, tripId) => {
   const totalCost = calculateTotal(tripCost, options);
 
   const {contact, name} = options;
@@ -29,7 +29,6 @@ const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
     totalCost,
     tripName,
     tripId,
-    countryCode,
 
   };
 
@@ -52,7 +51,7 @@ const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
     });
 };
 
-const OrderForm = ({tripCost, options, setOrderOption, tripName, tripId, countryCode}) => (
+const OrderForm = ({tripCost, options, setOrderOption, tripName, tripId}) => (
   
   <Row>
     {pricing.map(option => (
@@ -63,7 +62,7 @@ const OrderForm = ({tripCost, options, setOrderOption, tripName, tripId, country
     <Col xs={12}>
       <OrderSummary totalCost={tripCost} orderOptions={options} />
     </Col>
-    <Button onClick={() => sendOrder(options, tripCost, tripName, tripId, countryCode)}>Order now!</Button>
+    <Button onClick={() => sendOrder(options, tripCost, tripName, tripId)}>Order now!</Button>
 
   </Row>
 );

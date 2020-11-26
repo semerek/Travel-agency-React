@@ -167,6 +167,106 @@
       "start-date": "2020-10-27T23:00:00.000Z",
       "totalCost": "$46,229",
       "id": 12
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "pool"
+      ],
+      "adults": 1,
+      "children": "1",
+      "name": "Marta",
+      "contact": "72637628",
+      "start-date": "2020-11-24T23:00:00.000Z",
+      "totalCost": 46378.29,
+      "id": 13
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "pool"
+      ],
+      "adults": 1,
+      "children": "1",
+      "name": "Marta",
+      "contact": "ttt",
+      "start-date": "2020-11-24T23:00:00.000Z",
+      "totalCost": 46378.29,
+      "id": 14
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "pool"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "dsd",
+      "contact": "545353",
+      "start-date": "2020-11-25T23:00:00.000Z",
+      "totalCost": 30918.86,
+      "id": 15
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "kitchen"
+      ],
+      "adults": 1,
+      "children": "3",
+      "name": "Marta",
+      "contact": "mm.semrau@gmail.com",
+      "start-date": "2020-11-30T23:00:00.000Z",
+      "totalCost": 74797.15,
+      "id": 16
+    },
+    {
+      "car-rental": "suv",
+      "accommodation": "hotel",
+      "features": [
+        "security"
+      ],
+      "adults": 1,
+      "children": "1",
+      "name": "sas",
+      "contact": "zdc",
+      "start-date": "2020-11-03T23:00:00.000Z",
+      "totalCost": 47278.29,
+      "id": 17
+    },
+    {
+      "car-rental": "suv",
+      "accommodation": "hotel",
+      "features": [
+        "security"
+      ],
+      "adults": 1,
+      "children": "1",
+      "name": "sas",
+      "contact": "zdc",
+      "start-date": "2020-11-03T23:00:00.000Z",
+      "totalCost": 47278.29,
+      "id": 18
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "security"
+      ],
+      "adults": 1,
+      "children": "0",
+      "name": "marta",
+      "contact": "808086272",
+      "start-date": "2020-11-22T23:00:00.000Z",
+      "totalCost": 31418.86,
+      "tripName": "Pleasant trek in outstanding Togo",
+      "tripId": "5cc1d10181a30e85c8d9ad4a",
+      "id": 19
     }
   ]
 }
